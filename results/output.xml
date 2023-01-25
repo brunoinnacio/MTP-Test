@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on darwin)" generated="20230125 00:27:08.191" rpa="false" schemaversion="3">
+<suite id="s1" name="MTP-Test" source="/Users/macbookpro/Automacao/MTP-Test">
+<suite id="s1-s1" name="Automacao" source="/Users/macbookpro/Automacao/MTP-Test/Automacao">
+<suite id="s1-s1-s1" name="Tests" source="/Users/macbookpro/Automacao/MTP-Test/Automacao/tests">
+<suite id="s1-s1-s1-s1" name="Cadastro" source="/Users/macbookpro/Automacao/MTP-Test/Automacao/tests/cadastro.robot">
+<test id="s1-s1-s1-s1-t1" name="Validar mensagens dos campos do cadastro" line="16">
+<kw name="Dado que esteja na tela de cadastro" library="suit_setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://courses.ultimateqa.com/users/sign_up</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 00:27:08.663" level="INFO">Opening browser 'chrome' to base url 'https://courses.ultimateqa.com/users/sign_up'.</msg>
+<status status="PASS" starttime="20230125 00:27:08.662" endtime="20230125 00:27:14.333"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230125 00:27:14.334" endtime="20230125 00:27:14.795"/>
+</kw>
+<status status="PASS" starttime="20230125 00:27:08.661" endtime="20230125 00:27:14.795"/>
+</kw>
+<kw name="Quando tendo fazer o login sem preencher os campos" library="cadastro_kws">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${signUp}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230125 00:27:14.796" endtime="20230125 00:27:14.826"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signUp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 00:27:14.827" level="INFO">Clicking element 'xpath://button[@type='submit'][contains(.,'Sign up')]'.</msg>
+<status status="PASS" starttime="20230125 00:27:14.827" endtime="20230125 00:27:14.880"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230125 00:27:16.118" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230125 00:27:14.880" endtime="20230125 00:27:16.119"/>
+</kw>
+<status status="PASS" starttime="20230125 00:27:14.796" endtime="20230125 00:27:16.119"/>
+</kw>
+<kw name="Entao devera aparecer as mensagem de validacao" library="cadastro_kws">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_emailBlank}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 00:27:16.120" endtime="20230125 00:27:16.132"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_terms}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 00:27:16.133" endtime="20230125 00:27:16.144"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_email}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 00:27:16.144" endtime="20230125 00:27:16.155"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_fieldBlank}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 00:27:16.155" endtime="20230125 00:27:16.167"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_firstName}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 00:27:16.167" endtime="20230125 00:27:16.178"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_lastName}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 00:27:16.178" endtime="20230125 00:27:16.188"/>
+</kw>
+<status status="PASS" starttime="20230125 00:27:16.120" endtime="20230125 00:27:16.189"/>
+</kw>
+<kw name="Fechar Navegador" library="suit_setup">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230125 00:27:16.189" endtime="20230125 00:27:16.271"/>
+</kw>
+<status status="PASS" starttime="20230125 00:27:16.189" endtime="20230125 00:27:16.272"/>
+</kw>
+<status status="PASS" starttime="20230125 00:27:08.660" endtime="20230125 00:27:16.272"/>
+</test>
+<status status="PASS" starttime="20230125 00:27:08.221" endtime="20230125 00:27:16.274"/>
+</suite>
+<status status="PASS" starttime="20230125 00:27:08.218" endtime="20230125 00:27:16.277"/>
+</suite>
+<status status="PASS" starttime="20230125 00:27:08.216" endtime="20230125 00:27:16.279"/>
+</suite>
+<status status="PASS" starttime="20230125 00:27:08.194" endtime="20230125 00:27:16.281"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="MTP-Test">MTP-Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Automacao">MTP-Test.Automacao</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Tests">MTP-Test.Automacao.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Cadastro">MTP-Test.Automacao.Tests.Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
