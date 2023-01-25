@@ -38,8 +38,6 @@ Quando tendo fazer o login sem preencher os campos
   Capture Page Screenshot
 
 Entao devera aparecer as mensagem de validacao
-  #Wait Until Page Contains  text=${msg_error_email_PleaseEnterValidEmail}
-  #Wait Until Page Contains  text=${msg_error_emailInvalid}
   Wait Until Page Contains  text=${msg_error_emailBlank}
   Wait Until Page Contains  text=${msg_error_terms}
   Wait Until Page Contains  text=${msg_error_email}

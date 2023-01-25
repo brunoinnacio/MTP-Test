@@ -1,4 +1,8 @@
 ***Variables***
+#Massa de dados fixos
+${lastname}       jw
+${password}       12345678
+
 #ELEMENTOS MAPEADOS NA TELA PARA INTERACAO
 ${txt_firstName}        id:user[first_name]
 ${txt_lastName}         id:user[last_name]
@@ -8,13 +12,8 @@ ${ck_userTerms}         id:user[terms]
 ${signUp}               xpath://button[@type='submit'][contains(.,'Sign up')]
 ${signIn}               xpath://button[@type='submit'][contains(.,'Sign in')]
 
-#Massa de dados fixos
-${lastname}       jw
-${password}       12345678
-
-
-
-${msg_error_email_PleaseEnterValidEmail}      Please enter a valid email address
+#Mensagens de erro na tela de cadastro
+${msg_error_email_PleaseEnterValidEmail}    Please enter a valid email address
 ${msg_error_emailInvalid}    Email is invalid
 ${msg_error_emailBlank}      Email can't be blank
 ${msg_error_terms}           Terms must be accepted
