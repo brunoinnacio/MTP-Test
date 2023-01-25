@@ -1,6 +1,11 @@
 *** Settings ***
-Resource    /Users/macbookpro/Automacao/MTP-Test/Automacao/resources/keywords.robot
-Resource    /Users/macbookpro/Automacao/MTP-Test/Automacao/resources/suit_setup.robot
+Resource    ${EXECDIR}/resources/keywords.robot
+Resource    ${EXECDIR}/resources/suit_setup.robot
+
+Documentation
+...  Esses cenarios consistem em automatizar a criacao de um usuario e depois se logar com o mesmo no sistema.
+...  Além disso, está sendo validado as mensagens de validacao dos campos de cadastro e login.
+
 ***Test Cases***
 Criar Conta
     Dado que esteja na tela de cadastro

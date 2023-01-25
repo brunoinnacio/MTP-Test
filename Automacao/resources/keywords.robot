@@ -1,2 +1,2 @@
 **Settings**
-Resource        /Users/macbookpro/Automacao/MTP-Test/Automacao/keywords/cadastro/cadastro_kws.robot
+Resource        ${EXECDIR}/keywords/cadastro/cadastro_kws.robot

@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    /Users/macbookpro/Automacao/MTP-Test/Automacao/resources/page_objects.robot
+Resource    ${EXECDIR}/resources/page_objects.robot
 Library     FakerLibrary    locale=pt_BR
 ***Keywords***
 Quando preencho os campos corretamente

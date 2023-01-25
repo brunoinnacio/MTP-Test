@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on darwin)" generated="20230125 14:41:02.898" rpa="false" schemaversion="3">
+<suite id="s1" name="Cadastro" source="/Users/macbookpro/Automacao/MTP-Test/Automacao/tests/cadastro.robot">
+<test id="s1-t1" name="Criar Conta" line="10">
+<kw name="Dado que esteja na tela de cadastro" library="suit_setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://courses.ultimateqa.com/users/sign_up</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 14:41:03.319" level="INFO">Opening browser 'chrome' to base url 'https://courses.ultimateqa.com/users/sign_up'.</msg>
+<status status="PASS" starttime="20230125 14:41:03.319" endtime="20230125 14:41:08.379"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230125 14:41:08.380" endtime="20230125 14:41:08.894"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:03.318" endtime="20230125 14:41:08.895"/>
+</kw>
+<kw name="Quando preencho os campos corretamente" library="cadastro_kws">
+<kw name="First Name" library="FakerLibrary">
+<var>${faker_name}</var>
+<msg timestamp="20230125 14:41:08.895" level="INFO">${faker_name} = Marcelo</msg>
+<status status="PASS" starttime="20230125 14:41:08.895" endtime="20230125 14:41:08.895"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${faker_email}</var>
+<msg timestamp="20230125 14:41:08.896" level="INFO">${faker_email} = catarinarocha@example.org</msg>
+<status status="PASS" starttime="20230125 14:41:08.896" endtime="20230125 14:41:08.896"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${faker_email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230125 14:41:08.896" level="INFO">${faker_email} = catarinarocha@example.org</msg>
+<status status="PASS" starttime="20230125 14:41:08.896" endtime="20230125 14:41:08.897"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_firstName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230125 14:41:08.897" endtime="20230125 14:41:08.920"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_firstName}</arg>
+<arg>${faker_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:08.921" level="INFO">Typing text 'Marcelo' into text field 'id:user[first_name]'.</msg>
+<status status="PASS" starttime="20230125 14:41:08.920" endtime="20230125 14:41:09.080"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_lastName}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:09.081" level="INFO">Typing text 'jw' into text field 'id:user[last_name]'.</msg>
+<status status="PASS" starttime="20230125 14:41:09.080" endtime="20230125 14:41:09.151"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_email}</arg>
+<arg>${faker_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:09.152" level="INFO">Typing text 'catarinarocha@example.org' into text field 'id:user[email]'.</msg>
+<status status="PASS" starttime="20230125 14:41:09.151" endtime="20230125 14:41:09.246"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:09.247" level="INFO">Typing text '12345678' into text field 'id:user[password]'.</msg>
+<status status="PASS" starttime="20230125 14:41:09.247" endtime="20230125 14:41:09.329"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:08.895" endtime="20230125 14:41:09.330"/>
+</kw>
+<kw name="E aceito os termos de uso" library="cadastro_kws">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ck_userTerms}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:09.330" level="INFO">Clicking element 'id:user[terms]'.</msg>
+<status status="PASS" starttime="20230125 14:41:09.330" endtime="20230125 14:41:09.410"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:09.330" endtime="20230125 14:41:09.411"/>
+</kw>
+<kw name="E Clico em SignUp" library="cadastro_kws">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${signUp}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230125 14:41:09.411" endtime="20230125 14:41:09.433"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signUp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:09.433" level="INFO">Clicking element 'xpath://button[@type='submit'][contains(.,'Sign up')]'.</msg>
+<status status="PASS" starttime="20230125 14:41:09.433" endtime="20230125 14:41:09.497"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230125 14:41:11.713" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230125 14:41:09.497" endtime="20230125 14:41:11.713"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:09.411" endtime="20230125 14:41:11.714"/>
+</kw>
+<kw name="Fechar Navegador" library="suit_setup">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230125 14:41:11.714" endtime="20230125 14:41:11.802"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:11.714" endtime="20230125 14:41:11.803"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:03.317" endtime="20230125 14:41:11.803"/>
+</test>
+<test id="s1-t2" name="Logar com usuario criado" line="16">
+<kw name="Dado que esteja na tela de login" library="suit_setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://courses.ultimateqa.com/users/sign_in</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 14:41:11.806" level="INFO">Opening browser 'chrome' to base url 'https://courses.ultimateqa.com/users/sign_in'.</msg>
+<status status="PASS" starttime="20230125 14:41:11.805" endtime="20230125 14:41:16.542"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230125 14:41:16.543" endtime="20230125 14:41:17.061"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:11.805" endtime="20230125 14:41:17.061"/>
+</kw>
+<kw name="Quando faco login com a conta criada recentemente" library="cadastro_kws">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230125 14:41:17.062" endtime="20230125 14:41:17.083"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_email}</arg>
+<arg>${faker_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:17.083" level="INFO">Typing text 'catarinarocha@example.org' into text field 'id:user[email]'.</msg>
+<status status="PASS" starttime="20230125 14:41:17.083" endtime="20230125 14:41:17.181"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:17.182" level="INFO">Typing text '12345678' into text field 'id:user[password]'.</msg>
+<status status="PASS" starttime="20230125 14:41:17.181" endtime="20230125 14:41:17.249"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:17.249" level="INFO">Clicking element 'xpath://button[@type='submit'][contains(.,'Sign in')]'.</msg>
+<status status="PASS" starttime="20230125 14:41:17.249" endtime="20230125 14:41:17.326"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230125 14:41:19.442" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230125 14:41:17.327" endtime="20230125 14:41:19.442"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:17.062" endtime="20230125 14:41:19.442"/>
+</kw>
+<kw name="Entao devo validar o usuario logado" library="cadastro_kws">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 14:41:19.443" endtime="20230125 14:41:19.455"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230125 14:41:19.796" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230125 14:41:19.455" endtime="20230125 14:41:19.796"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:19.443" endtime="20230125 14:41:19.796"/>
+</kw>
+<kw name="Fechar Navegador" library="suit_setup">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230125 14:41:19.796" endtime="20230125 14:41:19.882"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:19.796" endtime="20230125 14:41:19.882"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:11.804" endtime="20230125 14:41:19.883"/>
+</test>
+<test id="s1-t3" name="Validar mensagens dos campos do cadastro" line="21">
+<kw name="Dado que esteja na tela de cadastro" library="suit_setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://courses.ultimateqa.com/users/sign_up</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 14:41:19.885" level="INFO">Opening browser 'chrome' to base url 'https://courses.ultimateqa.com/users/sign_up'.</msg>
+<status status="PASS" starttime="20230125 14:41:19.885" endtime="20230125 14:41:24.564"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230125 14:41:24.564" endtime="20230125 14:41:25.077"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:19.884" endtime="20230125 14:41:25.078"/>
+</kw>
+<kw name="Quando tendo me cadastrar sem preencher os campos" library="cadastro_kws">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${signUp}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230125 14:41:25.078" endtime="20230125 14:41:25.096"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signUp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:25.097" level="INFO">Clicking element 'xpath://button[@type='submit'][contains(.,'Sign up')]'.</msg>
+<status status="PASS" starttime="20230125 14:41:25.097" endtime="20230125 14:41:25.147"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230125 14:41:26.307" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230125 14:41:25.147" endtime="20230125 14:41:26.308"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:25.078" endtime="20230125 14:41:26.308"/>
+</kw>
+<kw name="Entao devera aparecer as mensagem de validacao na tela de cadastro" library="cadastro_kws">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_emailBlank}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 14:41:26.308" endtime="20230125 14:41:26.319"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_terms}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 14:41:26.319" endtime="20230125 14:41:26.329"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_email}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 14:41:26.329" endtime="20230125 14:41:26.339"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_fieldBlank}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 14:41:26.339" endtime="20230125 14:41:26.348"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_firstName}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 14:41:26.348" endtime="20230125 14:41:26.357"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_lastName}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 14:41:26.358" endtime="20230125 14:41:26.367"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230125 14:41:26.483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230125 14:41:26.367" endtime="20230125 14:41:26.483"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:26.308" endtime="20230125 14:41:26.483"/>
+</kw>
+<kw name="Fechar Navegador" library="suit_setup">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230125 14:41:26.484" endtime="20230125 14:41:26.574"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:26.484" endtime="20230125 14:41:26.574"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:19.883" endtime="20230125 14:41:26.574"/>
+</test>
+<test id="s1-t4" name="Validar mensagens tela de login" line="26">
+<kw name="Dado que esteja na tela de login" library="suit_setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://courses.ultimateqa.com/users/sign_in</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 14:41:26.576" level="INFO">Opening browser 'chrome' to base url 'https://courses.ultimateqa.com/users/sign_in'.</msg>
+<status status="PASS" starttime="20230125 14:41:26.576" endtime="20230125 14:41:30.711"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230125 14:41:30.711" endtime="20230125 14:41:31.227"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:26.575" endtime="20230125 14:41:31.228"/>
+</kw>
+<kw name="Quando tendo fazer o login sem preencher os campos" library="cadastro_kws">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${signIn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230125 14:41:31.228" endtime="20230125 14:41:31.247"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 14:41:31.248" level="INFO">Clicking element 'xpath://button[@type='submit'][contains(.,'Sign in')]'.</msg>
+<status status="PASS" starttime="20230125 14:41:31.248" endtime="20230125 14:41:31.303"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230125 14:41:32.464" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230125 14:41:31.304" endtime="20230125 14:41:32.464"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:31.228" endtime="20230125 14:41:32.464"/>
+</kw>
+<kw name="Entao devera aparecer as mensagem de validacao na tela de Login" library="cadastro_kws">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${msg_error_Invalid_Email_Password}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 14:41:32.465" endtime="20230125 14:41:32.476"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:32.465" endtime="20230125 14:41:32.476"/>
+</kw>
+<kw name="Fechar Navegador" library="suit_setup">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230125 14:41:32.476" endtime="20230125 14:41:32.656"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:32.476" endtime="20230125 14:41:32.656"/>
+</kw>
+<status status="PASS" starttime="20230125 14:41:26.575" endtime="20230125 14:41:32.657"/>
+</test>
+<doc>Esses cenarios consistem em automatizar a criacao de um usuario e depois se logar com o mesmo no sistema.
+Além disso, está sendo validado as mensagens de validacao dos campos de cadastro e login.</doc>
+<status status="PASS" starttime="20230125 14:41:02.899" endtime="20230125 14:41:32.657"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
