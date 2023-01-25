@@ -21,3 +21,6 @@ ${msg_error_email}           Password can't be blank
 ${msg_error_fieldBlank}      This field cannot be blank
 ${msg_error_firstName}       First name can't be blank
 ${msg_error_lastName}        Last name can't be blank
+
+#Mensagem de erro tela de login
+${msg_error_Invalid_Email_Password}   Invalid email or password.

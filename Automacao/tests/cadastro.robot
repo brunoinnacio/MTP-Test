@@ -15,9 +15,11 @@ Logar com usuario criado
     Fechar Navegador 
 Validar mensagens dos campos do cadastro
     Dado que esteja na tela de cadastro
-    Quando tendo fazer o login sem preencher os campos
-    Entao devera aparecer as mensagem de validacao
+    Quando tendo me cadastrar sem preencher os campos
+    Entao devera aparecer as mensagem de validacao na tela de cadastro
     Fechar Navegador
-
-
-
+Validar mensagens tela de login
+    Dado que esteja na tela de login
+    Quando tendo fazer o login sem preencher os campos
+    Entao devera aparecer as mensagem de validacao na tela de Login
+    Fechar Navegador

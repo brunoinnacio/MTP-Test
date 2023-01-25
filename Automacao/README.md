@@ -19,6 +19,7 @@ robot -d ./Results Automacao/tests/cadastro.robot
 ## Estrutura
 --> Dentro da Pasta Keyword: Foi criado uma subpasta com o arquivo cadastro_kws.robot onde inserimos todas as keywords
 --> Dentro da Pasta page_elementes: Foi criado uma subpasta com o arquivo cadastroPage.robot onde fica todos os elementos mapeados como xpath, id etc...
+
 --> Dentro da Pasta Resource é feita interacao com todas as telas mapeadas do sistema
 --> A pasta tests é onde criamos todos os testes cases
 --> Pasta results fica armazenando todos os logs do sistema

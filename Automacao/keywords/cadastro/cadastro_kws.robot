@@ -32,15 +32,24 @@ Entao devo validar o usuario logado
   Wait Until Page Contains            text=Products
   Capture Page Screenshot
 
-Quando tendo fazer o login sem preencher os campos
+Quando tendo me cadastrar sem preencher os campos
   Wait Until Element Is Visible      ${signUp}
   Click Element                      ${signUp}
   Capture Page Screenshot
 
-Entao devera aparecer as mensagem de validacao
+Entao devera aparecer as mensagem de validacao na tela de cadastro
   Wait Until Page Contains  text=${msg_error_emailBlank}
   Wait Until Page Contains  text=${msg_error_terms}
   Wait Until Page Contains  text=${msg_error_email}
   Wait Until Page Contains  text=${msg_error_fieldBlank}
   Wait Until Page Contains  text=${msg_error_firstName}
   Wait Until Page Contains  text=${msg_error_lastName}
+  Capture Page Screenshot
+
+Quando tendo fazer o login sem preencher os campos
+  Wait Until Element Is Visible      ${signIn}
+  Click Element                      ${signIn}
+  Capture Page Screenshot
+ 
+Entao devera aparecer as mensagem de validacao na tela de Login
+  Wait Until Page Contains  text=${msg_error_Invalid_Email_Password}
